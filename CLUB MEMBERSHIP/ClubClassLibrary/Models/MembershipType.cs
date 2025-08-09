@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +12,6 @@ namespace ClubClassLibrary.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal BasePrice { get; set; }
+        public List<Membership> Memberships { get; set; }
     }
 }
