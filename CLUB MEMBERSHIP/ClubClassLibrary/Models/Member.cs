@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +14,7 @@ namespace ClubClassLibrary.Models
         public DateTime BirthDate { get; set; }
         public string Address { get; set; }
         public DateTime JoinDate { get; set; } = DateTime.Now;
+        public List<Membership> Memberships { get; set; }
+        public List<Payment> Payments { get; set; }
     }
 }
