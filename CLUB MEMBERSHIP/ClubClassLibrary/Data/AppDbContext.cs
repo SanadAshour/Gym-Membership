@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClubClassLibrary.Data
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Member> Members { get; set; }
         public DbSet<Membership> Memberships { get; set; }
@@ -68,3 +68,4 @@ namespace ClubClassLibrary.Data
 
     }
 }
+
