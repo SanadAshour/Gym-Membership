@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClubClassLibrary.Models
 {
-    internal class MembershipType
+    public class MembershipType
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -15,3 +15,4 @@ namespace ClubClassLibrary.Models
         public List<Membership> Memberships { get; set; }
     }
 }
+
