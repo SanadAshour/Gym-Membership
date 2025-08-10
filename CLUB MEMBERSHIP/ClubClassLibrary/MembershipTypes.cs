@@ -20,8 +20,9 @@ namespace ClubUI
 
         private void MembershipTypes_Load(object sender, EventArgs e)
         {
-            AppDbContext ADC = new AppDbContext();
-            DGV.DataSource = ADC.MembershipTypes.ToList();
+            var repo = new MembershipTypeRepository();
+            DGV.DataSource = repo.GetAllMembershipTypes();
         }
     }
 }
+
