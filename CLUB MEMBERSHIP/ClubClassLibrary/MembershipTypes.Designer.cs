@@ -55,6 +55,7 @@ namespace ClubUI
             DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DGV.Size = new Size(738, 200);
             DGV.TabIndex = 0;
+            DGV.CellDoubleClick += DGV_CellDoubleClick;
             // 
             // MstNameTB
             // 
@@ -98,6 +99,7 @@ namespace ClubUI
             updateBtn.TabIndex = 5;
             updateBtn.Text = "UPDATE";
             updateBtn.UseVisualStyleBackColor = true;
+            updateBtn.Click += updateBtn_Click;
             // 
             // deleteBtn
             // 
@@ -107,6 +109,7 @@ namespace ClubUI
             deleteBtn.TabIndex = 6;
             deleteBtn.Text = "DELETE";
             deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // clearBtn
             // 
