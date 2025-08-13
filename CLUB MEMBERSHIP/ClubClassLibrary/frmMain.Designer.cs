@@ -1,4 +1,4 @@
-﻿namespace ClubUI
+namespace ClubUI
 {
     partial class frmMain
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
@@ -35,7 +36,15 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             ViewMembershipTypes = new Button();
+            panel1 = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            PayementBtn = new Button();
+            MembershipsBtn = new Button();
+            MemberBtn = new Button();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
+            panel1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -83,27 +92,128 @@
             // 
             // ViewMembershipTypes
             // 
-            ViewMembershipTypes.Location = new Point(29, 66);
+            ViewMembershipTypes.BackColor = SystemColors.ButtonHighlight;
+            ViewMembershipTypes.Dock = DockStyle.Fill;
+            ViewMembershipTypes.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            ViewMembershipTypes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            ViewMembershipTypes.Image = (Image)resources.GetObject("ViewMembershipTypes.Image");
+            ViewMembershipTypes.ImageAlign = ContentAlignment.BottomCenter;
+            ViewMembershipTypes.Location = new Point(12, 12);
+            ViewMembershipTypes.Margin = new Padding(12);
             ViewMembershipTypes.Name = "ViewMembershipTypes";
-            ViewMembershipTypes.Size = new Size(201, 35);
+            ViewMembershipTypes.Size = new Size(364, 125);
             ViewMembershipTypes.TabIndex = 1;
-            ViewMembershipTypes.Text = "View Membership Types";
-            ViewMembershipTypes.UseVisualStyleBackColor = true;
+            ViewMembershipTypes.Text = "Membership Types";
+            ViewMembershipTypes.TextImageRelation = TextImageRelation.ImageAboveText;
+            ViewMembershipTypes.UseVisualStyleBackColor = false;
             ViewMembershipTypes.Click += ViewMembershipTypes_Click;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = SystemColors.ControlLight;
+            panel1.Controls.Add(tableLayoutPanel1);
+            panel1.Location = new Point(12, 140);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(776, 298);
+            panel1.TabIndex = 2;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(PayementBtn, 1, 1);
+            tableLayoutPanel1.Controls.Add(MembershipsBtn, 0, 1);
+            tableLayoutPanel1.Controls.Add(ViewMembershipTypes, 0, 0);
+            tableLayoutPanel1.Controls.Add(MemberBtn, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(776, 298);
+            tableLayoutPanel1.TabIndex = 4;
+            // 
+            // PayementBtn
+            // 
+            PayementBtn.Dock = DockStyle.Fill;
+            PayementBtn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            PayementBtn.Image = (Image)resources.GetObject("PayementBtn.Image");
+            PayementBtn.Location = new Point(400, 161);
+            PayementBtn.Margin = new Padding(12);
+            PayementBtn.Name = "PayementBtn";
+            PayementBtn.Size = new Size(364, 125);
+            PayementBtn.TabIndex = 4;
+            PayementBtn.Text = "Payments";
+            PayementBtn.TextAlign = ContentAlignment.BottomCenter;
+            PayementBtn.TextImageRelation = TextImageRelation.ImageAboveText;
+            PayementBtn.UseVisualStyleBackColor = true;
+            PayementBtn.Click += PayementBtn_Click;
+            // 
+            // MembershipsBtn
+            // 
+            MembershipsBtn.Dock = DockStyle.Fill;
+            MembershipsBtn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            MembershipsBtn.Image = (Image)resources.GetObject("MembershipsBtn.Image");
+            MembershipsBtn.Location = new Point(12, 161);
+            MembershipsBtn.Margin = new Padding(12);
+            MembershipsBtn.Name = "MembershipsBtn";
+            MembershipsBtn.Size = new Size(364, 125);
+            MembershipsBtn.TabIndex = 3;
+            MembershipsBtn.Text = "Memberships";
+            MembershipsBtn.TextAlign = ContentAlignment.BottomCenter;
+            MembershipsBtn.TextImageRelation = TextImageRelation.ImageAboveText;
+            MembershipsBtn.UseVisualStyleBackColor = true;
+            MembershipsBtn.Click += MembershipsBtn_Click;
+            // 
+            // MemberBtn
+            // 
+            MemberBtn.Dock = DockStyle.Fill;
+            MemberBtn.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            MemberBtn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            MemberBtn.Image = (Image)resources.GetObject("MemberBtn.Image");
+            MemberBtn.Location = new Point(400, 12);
+            MemberBtn.Margin = new Padding(12);
+            MemberBtn.Name = "MemberBtn";
+            MemberBtn.Size = new Size(364, 125);
+            MemberBtn.TabIndex = 2;
+            MemberBtn.Text = "Members";
+            MemberBtn.TextAlign = ContentAlignment.BottomCenter;
+            MemberBtn.TextImageRelation = TextImageRelation.ImageAboveText;
+            MemberBtn.UseVisualStyleBackColor = true;
+            MemberBtn.Click += MemberBtn_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.FlatStyle = FlatStyle.Flat;
+            label1.Font = new Font("Segoe UI", 15F);
+            label1.Location = new Point(152, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(498, 35);
+            label1.TabIndex = 3;
+            label1.Text = "GYM MEMBERSHIP MANAGEMENT SYSTEM";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(ViewMembershipTypes);
+            Controls.Add(panel1);
             Controls.Add(menuStrip1);
+            Controls.Add(label1);
             MainMenuStrip = menuStrip1;
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gym Membership";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            panel1.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,5 +227,11 @@
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private Button ViewMembershipTypes;
+        private Panel panel1;
+        private Label label1;
+        private Button MemberBtn;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Button PayementBtn;
+        private Button MembershipsBtn;
     }
 }
