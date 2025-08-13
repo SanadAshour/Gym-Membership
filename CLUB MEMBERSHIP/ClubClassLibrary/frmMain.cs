@@ -15,8 +15,31 @@ namespace ClubUI
 
         private void ViewMembershipTypes_Click(object sender, EventArgs e)
         {
-             frmMembershipTypes mbt = new frmMembershipTypes();
-             mbt.ShowDialog();
+            frmMembershipTypes mbt = new frmMembershipTypes();
+            mbt.ShowDialog();
+        }
+
+        private void MemberBtn_Click(object sender, EventArgs e)
+        {
+            frmMembers mb = new frmMembers();
+            mb.ShowDialog();
+        }
+
+        private void MembershipsBtn_Click(object sender, EventArgs e)
+        {
+            frmMemberships mship = new frmMemberships();
+            mship.ShowDialog();
+        }
+
+        private void PayementBtn_Click(object sender, EventArgs e)
+        {
+            frmPayments p = new frmPayments();
+            p.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
