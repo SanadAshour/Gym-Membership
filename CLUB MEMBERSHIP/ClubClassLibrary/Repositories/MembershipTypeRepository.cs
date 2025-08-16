@@ -1,4 +1,4 @@
-﻿using ClubClassLibrary.Data;
+using ClubClassLibrary.Data;
 using ClubClassLibrary.Interfaces;
 using ClubClassLibrary.Models;
 using Microsoft.EntityFrameworkCore;
