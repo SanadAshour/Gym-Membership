@@ -37,6 +37,10 @@ namespace ClubUI
             updateBtn = new Button();
             addBtn = new Button();
             DGV = new DataGridView();
+            StartDatePicker = new DateTimePicker();
+            EndDatePicker = new DateTimePicker();
+            StartDateLabel = new Label();
+            EndDateLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)DGV).BeginInit();
             SuspendLayout();
             // 
@@ -84,6 +88,7 @@ namespace ClubUI
             clearBtn.TabIndex = 11;
             clearBtn.Text = "CLEAR";
             clearBtn.UseVisualStyleBackColor = true;
+            clearBtn.Click += clearBtn_Click;
             // 
             // deleteBtn
             // 
@@ -93,6 +98,7 @@ namespace ClubUI
             deleteBtn.TabIndex = 10;
             deleteBtn.Text = "DELETE";
             deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // updateBtn
             // 
@@ -102,6 +108,7 @@ namespace ClubUI
             updateBtn.TabIndex = 9;
             updateBtn.Text = "UPDATE";
             updateBtn.UseVisualStyleBackColor = true;
+            updateBtn.Click += updateBtn_Click;
             // 
             // addBtn
             // 
@@ -111,6 +118,7 @@ namespace ClubUI
             addBtn.TabIndex = 8;
             addBtn.Text = "ADD";
             addBtn.UseVisualStyleBackColor = true;
+            addBtn.Click += addBtn_Click;
             // 
             // DGV
             // 
@@ -128,12 +136,49 @@ namespace ClubUI
             DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DGV.Size = new Size(738, 200);
             DGV.TabIndex = 12;
+            DGV.CellDoubleClick += DGV_CellDoubleClick;
+            // 
+            // StartDatePicker
+            // 
+            StartDatePicker.Location = new Point(504, 51);
+            StartDatePicker.Name = "StartDatePicker";
+            StartDatePicker.Size = new Size(250, 27);
+            StartDatePicker.TabIndex = 13;
+            // 
+            // EndDatePicker
+            // 
+            EndDatePicker.Location = new Point(504, 96);
+            EndDatePicker.Name = "EndDatePicker";
+            EndDatePicker.Size = new Size(250, 27);
+            EndDatePicker.TabIndex = 14;
+            // 
+            // StartDateLabel
+            // 
+            StartDateLabel.AutoSize = true;
+            StartDateLabel.Location = new Point(398, 53);
+            StartDateLabel.Name = "StartDateLabel";
+            StartDateLabel.Size = new Size(79, 20);
+            StartDateLabel.TabIndex = 15;
+            StartDateLabel.Text = "Start Date:";
+            // 
+            // EndDateLabel
+            // 
+            EndDateLabel.AutoSize = true;
+            EndDateLabel.Location = new Point(398, 101);
+            EndDateLabel.Name = "EndDateLabel";
+            EndDateLabel.Size = new Size(73, 20);
+            EndDateLabel.TabIndex = 16;
+            EndDateLabel.Text = "End Date:";
             // 
             // frmMemberships
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(EndDateLabel);
+            Controls.Add(StartDateLabel);
+            Controls.Add(EndDatePicker);
+            Controls.Add(StartDatePicker);
             Controls.Add(DGV);
             Controls.Add(clearBtn);
             Controls.Add(deleteBtn);
@@ -162,5 +207,9 @@ namespace ClubUI
         private Button updateBtn;
         private Button addBtn;
         private DataGridView DGV;
+        private DateTimePicker StartDatePicker;
+        private DateTimePicker EndDatePicker;
+        private Label StartDateLabel;
+        private Label EndDateLabel;
     }
 }
