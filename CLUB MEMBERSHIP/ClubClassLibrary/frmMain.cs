@@ -27,6 +27,7 @@ namespace ClubUI
             PayementBtn.Text = rm.GetString("BtnPayments");
             ViewMembershipTypes.Text = rm.GetString("BtnViewTypes");
 
+
             if (culture == "ar")
             {
                 this.RightToLeft = RightToLeft.Yes;
@@ -82,6 +83,12 @@ namespace ClubUI
         private void arabicToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetLanguage("ar");
+        }
+
+        private void inQuiriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInquiries IQ = new frmInquiries();
+            IQ.ShowDialog();
         }
     }
 }
