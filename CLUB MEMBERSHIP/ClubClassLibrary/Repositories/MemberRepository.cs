@@ -1,4 +1,4 @@
-﻿using ClubClassLibrary.Data;
+using ClubClassLibrary.Data;
 using ClubClassLibrary.Interfaces;
 using ClubClassLibrary.Models;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +28,10 @@ namespace ClubClassLibrary.Repositories
         public IEnumerable<Member> GetAllMembers()
         {
             return ADC.Members.ToList();
+        }
+        public IEnumerable<Member> FilterByDate(DateTime From,DateTime To)
+        {
+            return ADC.Members.Where(m => m.JoinDate >= From && m.JoinDate <= To).ToList();
         }
 
         public IEnumerable<Member> GetMembersByJoinDate(DateTime dateFrom, DateTime dateTo)
