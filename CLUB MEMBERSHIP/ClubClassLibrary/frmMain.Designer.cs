@@ -35,6 +35,10 @@ namespace ClubUI
             openToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
+            settingsToolStripMenuItem = new ToolStripMenuItem();
+            languageToolStripMenuItem = new ToolStripMenuItem();
+            englishToolStripMenuItem = new ToolStripMenuItem();
+            arabicToolStripMenuItem = new ToolStripMenuItem();
             ViewMembershipTypes = new Button();
             panel1 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -42,10 +46,7 @@ namespace ClubUI
             MembershipsBtn = new Button();
             MemberBtn = new Button();
             label1 = new Label();
-            settingsToolStripMenuItem = new ToolStripMenuItem();
-            languageToolStripMenuItem = new ToolStripMenuItem();
-            englishToolStripMenuItem = new ToolStripMenuItem();
-            arabicToolStripMenuItem = new ToolStripMenuItem();
+            inQuiriesToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -54,7 +55,7 @@ namespace ClubUI
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem, settingsToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem, settingsToolStripMenuItem, inQuiriesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 28);
@@ -71,13 +72,13 @@ namespace ClubUI
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(224, 26);
+            newToolStripMenuItem.Size = new Size(128, 26);
             newToolStripMenuItem.Text = "New";
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(224, 26);
+            openToolStripMenuItem.Size = new Size(128, 26);
             openToolStripMenuItem.Text = "Open";
             // 
             // helpToolStripMenuItem
@@ -93,6 +94,34 @@ namespace ClubUI
             aboutToolStripMenuItem.Size = new Size(133, 26);
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+            // 
+            // settingsToolStripMenuItem
+            // 
+            settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { languageToolStripMenuItem });
+            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            settingsToolStripMenuItem.Size = new Size(76, 24);
+            settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // languageToolStripMenuItem
+            // 
+            languageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { englishToolStripMenuItem, arabicToolStripMenuItem });
+            languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            languageToolStripMenuItem.Size = new Size(157, 26);
+            languageToolStripMenuItem.Text = "Language";
+            // 
+            // englishToolStripMenuItem
+            // 
+            englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            englishToolStripMenuItem.Size = new Size(139, 26);
+            englishToolStripMenuItem.Text = "English";
+            englishToolStripMenuItem.Click += englishToolStripMenuItem_Click;
+            // 
+            // arabicToolStripMenuItem
+            // 
+            arabicToolStripMenuItem.Name = "arabicToolStripMenuItem";
+            arabicToolStripMenuItem.Size = new Size(139, 26);
+            arabicToolStripMenuItem.Text = "Arabic";
+            arabicToolStripMenuItem.Click += arabicToolStripMenuItem_Click;
             // 
             // ViewMembershipTypes
             // 
@@ -202,33 +231,12 @@ namespace ClubUI
             label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
             // 
-            // settingsToolStripMenuItem
+            // inQuiriesToolStripMenuItem
             // 
-            settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { languageToolStripMenuItem });
-            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(76, 24);
-            settingsToolStripMenuItem.Text = "Settings";
-            // 
-            // languageToolStripMenuItem
-            // 
-            languageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { englishToolStripMenuItem, arabicToolStripMenuItem });
-            languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            languageToolStripMenuItem.Size = new Size(224, 26);
-            languageToolStripMenuItem.Text = "Language";
-            // 
-            // englishToolStripMenuItem
-            // 
-            englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            englishToolStripMenuItem.Size = new Size(224, 26);
-            englishToolStripMenuItem.Text = "English";
-            englishToolStripMenuItem.Click += englishToolStripMenuItem_Click;
-            // 
-            // arabicToolStripMenuItem
-            // 
-            arabicToolStripMenuItem.Name = "arabicToolStripMenuItem";
-            arabicToolStripMenuItem.Size = new Size(224, 26);
-            arabicToolStripMenuItem.Text = "Arabic";
-            arabicToolStripMenuItem.Click += arabicToolStripMenuItem_Click;
+            inQuiriesToolStripMenuItem.Name = "inQuiriesToolStripMenuItem";
+            inQuiriesToolStripMenuItem.Size = new Size(81, 24);
+            inQuiriesToolStripMenuItem.Text = "InQuiries";
+            inQuiriesToolStripMenuItem.Click += inQuiriesToolStripMenuItem_Click;
             // 
             // frmMain
             // 
@@ -269,5 +277,6 @@ namespace ClubUI
         private ToolStripMenuItem languageToolStripMenuItem;
         private ToolStripMenuItem englishToolStripMenuItem;
         private ToolStripMenuItem arabicToolStripMenuItem;
+        private ToolStripMenuItem inQuiriesToolStripMenuItem;
     }
 }
