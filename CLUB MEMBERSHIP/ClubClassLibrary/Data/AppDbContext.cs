@@ -1,4 +1,4 @@
-﻿using ClubClassLibrary.Models;
+using ClubClassLibrary.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,6 +14,7 @@ namespace ClubClassLibrary.Data
         public DbSet<Membership> Memberships { get; set; }
         public DbSet<MembershipType> MembershipTypes { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -63,9 +64,15 @@ namespace ClubClassLibrary.Data
                 new Member { Id = 2, PhoneNumber="1234", Name = "Seraj", Address = "SARAJ", BirthDate = new DateTime(2004, 10, 24), JoinDate = new DateTime(2024, 01, 01) }
                 );
 
+            //SEEDING USERS
+            modelBuilder.Entity<User>().HasData(
+                new User { Id = 1, Name = "admin1", Email = "admin1@yahoo.com", Password = "123", UsersPermission = true, MembersPermission = false, ReportsPermission = false },
+                new User { Id = 2, Name = "admin2", Email = "admin2@yahoo.com", Password = "456", UsersPermission = false, MembersPermission = true, ReportsPermission = false },
+                new User { Id = 3, Name = "admin3", Email = "admin3@yahoo.com", Password = "789", UsersPermission = false, MembersPermission = false, ReportsPermission = true }
+                );
+
             base.OnModelCreating(modelBuilder);
         }
 
     }
 }
-
