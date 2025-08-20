@@ -13,7 +13,7 @@ namespace ClubUI
 {
     public partial class frmReport : Form
     {
-        public List<Member> queryData = new List<Member>();
+        
         public frmReport()
         {
             InitializeComponent();
@@ -21,7 +21,8 @@ namespace ClubUI
 
         private void frmReport_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(queryData.Count().ToString());
+           
         }
     }
 }
+
