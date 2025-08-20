@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClubClassLibrary.Repositories;
 using ClubClassLibrary.Models;
+using Microsoft.Reporting.WinForms;
 
 namespace ClubUI
 {
@@ -33,7 +34,12 @@ namespace ClubUI
         private void Printbtn_Click(object sender, EventArgs e)
         {
             frmReport r = new frmReport();
-            r.queryData = data;
+            r.reportViewer1.LocalReport.ReportEmbeddedResource = "ClubUI.Reports.MemberReport.rdlc";
+            r.reportViewer1.LocalReport.DataSources.Clear();
+            r.reportViewer1.LocalReport.DataSources.Add(
+                new ReportDataSource("DataSetMembers", data)
+                );
+            r.reportViewer1.RefreshReport();
             r.ShowDialog();
         }
     }
