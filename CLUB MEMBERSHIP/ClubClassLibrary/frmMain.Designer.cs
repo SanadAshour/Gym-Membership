@@ -39,6 +39,8 @@ namespace ClubUI
             languageToolStripMenuItem = new ToolStripMenuItem();
             englishToolStripMenuItem = new ToolStripMenuItem();
             arabicToolStripMenuItem = new ToolStripMenuItem();
+            inQuiriesToolStripMenuItem = new ToolStripMenuItem();
+            usersToolStripMenuItem = new ToolStripMenuItem();
             ViewMembershipTypes = new Button();
             panel1 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -46,7 +48,6 @@ namespace ClubUI
             MembershipsBtn = new Button();
             MemberBtn = new Button();
             label1 = new Label();
-            inQuiriesToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -55,7 +56,7 @@ namespace ClubUI
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem, settingsToolStripMenuItem, inQuiriesToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem, settingsToolStripMenuItem, inQuiriesToolStripMenuItem, usersToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 28);
@@ -122,6 +123,19 @@ namespace ClubUI
             arabicToolStripMenuItem.Size = new Size(139, 26);
             arabicToolStripMenuItem.Text = "Arabic";
             arabicToolStripMenuItem.Click += arabicToolStripMenuItem_Click;
+            // 
+            // inQuiriesToolStripMenuItem
+            // 
+            inQuiriesToolStripMenuItem.Name = "inQuiriesToolStripMenuItem";
+            inQuiriesToolStripMenuItem.Size = new Size(81, 24);
+            inQuiriesToolStripMenuItem.Text = "InQuiries";
+            inQuiriesToolStripMenuItem.Click += inQuiriesToolStripMenuItem_Click;
+            // 
+            // usersToolStripMenuItem
+            // 
+            usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            usersToolStripMenuItem.Size = new Size(58, 24);
+            usersToolStripMenuItem.Text = "Users";
             // 
             // ViewMembershipTypes
             // 
@@ -231,13 +245,6 @@ namespace ClubUI
             label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
             // 
-            // inQuiriesToolStripMenuItem
-            // 
-            inQuiriesToolStripMenuItem.Name = "inQuiriesToolStripMenuItem";
-            inQuiriesToolStripMenuItem.Size = new Size(81, 24);
-            inQuiriesToolStripMenuItem.Text = "InQuiries";
-            inQuiriesToolStripMenuItem.Click += inQuiriesToolStripMenuItem_Click;
-            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -250,6 +257,8 @@ namespace ClubUI
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gym Membership";
+            WindowState = FormWindowState.Minimized;
+            Load += frmMain_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -278,5 +287,6 @@ namespace ClubUI
         private ToolStripMenuItem englishToolStripMenuItem;
         private ToolStripMenuItem arabicToolStripMenuItem;
         private ToolStripMenuItem inQuiriesToolStripMenuItem;
+        private ToolStripMenuItem usersToolStripMenuItem;
     }
 }
