@@ -90,5 +90,18 @@ namespace ClubUI
             frmInquiries IQ = new frmInquiries();
             IQ.ShowDialog();
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            frmLogin l = new frmLogin();
+            l.ShowDialog();
+            if (!l.LoggedIn)
+            {
+                Application.Exit();
+            } else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
     }
 }
